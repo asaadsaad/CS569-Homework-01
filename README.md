@@ -1,6 +1,21 @@
 # CS569 Homework 02
 ### Generics Exercise
+We have a function `homework` which takes object, and key of this object, and string value. The purpose of this function is to create a new object with concatenated property object[key] with third argument.
 
+The question - How to type generic types `T` and `K` in the definition of `homework` function in order to achieve compile time guarantee that `obj[key]` can be only `string`.
+```javascript
+const homework =
+  <T, K>(obj: T, key: K, payload: string): T => {
+    const prop = obj[key]; // compile error should not be here
+    return { ...obj, [key]: prop.concat(payload) }; // compile error should not be here
+}
+// tests
+const test = { fieldStr: 'text', fieldNum: 1, fieldStr2: 'text' };
+homework(test, 'fieldStr', 'test'); // should be ok 
+homework(test, 'fieldNum', 'test'); // should be error fieldNum is not string field 
+homework(test, 'notExistingField', 'test'); // should be error - no such field 
+homework(test, 'fieldStr2', 'test'); // should be ok 
+```
 ### Working with Webpack
 1. Install `typescript` transpiler globally: `npm i –g typescript`
 2. Create `tsconfig.json`: `tsc --init` and set `outDir: './js'`
