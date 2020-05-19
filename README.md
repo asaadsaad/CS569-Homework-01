@@ -10,7 +10,7 @@ queue.push("Asaad"); // ERROR : cannot push a string. Only numbers allowed
 ```
   
 ### Decorator Exercise
-Create a Module called `available.ts` in TypeScript that exports one factory decorator `addAvailability` to be used as a decorator for a simple empty class with a new `Boolean` property called `available`.  
+Create a Module called `available.ts` in TypeScript that exports one factory decorator `addAvailability` to be used as a decorator on any simple empty class, the decorator will add a new `boolean` property called `available`.  
 Use your custom decorator in `app.ts`:
 ```javascript
 @addAvailability(true) 
