@@ -22,5 +22,10 @@ Use your custom decorator in `app.ts`:
 class Course {} 
 
 console.log(new Course()); // object {available: true}
+
+@addAvailability(false) 
+class School {} 
+
+console.log(new School()); // object {available: false}
 ```
 Transpile your code to JS, then bundle it, and test your final bundle in the browser.
