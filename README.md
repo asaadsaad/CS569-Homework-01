@@ -23,8 +23,7 @@ queue.push("Asaad"); // ERROR : cannot push a string. Only numbers allowed
 ```
   
 ### Decorator Exercise
-Create a decorator called `addressify` in TypeScript to be used as on any empty class, the decorator will add two `number` properties `x` and `y`.  
-Use your custom decorator:
+Create a decorator called `addressify` in TypeScript to be used on any empty class, the decorator will add two `number` properties `x` and `y` as per this example:
 ```javascript
 @addressify(2)(4) 
 class Street {} 
