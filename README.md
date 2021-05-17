@@ -1,4 +1,17 @@
-# CS569 Homework 02
+# CS569 Homework 01
+### Object Typing
+Object literal may only specify known properties, add the necessary changes to allow adding optional property `z` as a number, and another property of any letter as a string.
+```javascript
+interface Point {
+    x: number;
+    y: number;
+}
+
+const point1: Point = { x: 2, y: 4};
+const point2: Point = { x: 3, y: 6, z: 9 };
+const point3: Point = { x: 4, y: 8, z: 12, name: "Asaad"};
+```
+  
 ### Generics Exercise
 Create a generic class `Queue` that restricts its items to a specified type.
 ```javascript
@@ -10,17 +23,12 @@ queue.push("Asaad"); // ERROR : cannot push a string. Only numbers allowed
 ```
   
 ### Decorator Exercise
-Create a Module called `available.ts` in TypeScript that exports one factory decorator `addAvailability` to be used as a decorator on any simple empty class, the decorator will add a new `boolean` property called `available`.  
-Use your custom decorator in `app.ts`:
+Create a decorator called `addressify` in TypeScript to be used as on any empty class, the decorator will add two `number` properties `x` and `y`.  
+Use your custom decorator:
 ```javascript
-@addAvailability(true) 
-class Course {} 
+@addressify(2)(4) 
+class Street {} 
 
-console.log(new Course()); // object {available: true}
-
-@addAvailability(false) 
-class School {} 
-
-console.log(new School()); // object {available: false}
+console.log(new Street()); // object {x: 2, y: 4}
 ```
-Transpile your code to JS, then bundle it, and test your final bundle in the browser. Remember to enable decorators in `tsconfig.json`.
+Transpile your code to JS, and test your code. Remember to enable decorators in `tsconfig.json`.
