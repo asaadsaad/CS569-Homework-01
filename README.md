@@ -10,7 +10,7 @@ queue.pop(); // returns "Asaad" and queue = ["Mike"]
 queue.push(2022); // ERROR : cannot push a number. Only strings are allowed!
 ```
 ### Review Design Patterns
-Review and implement of the following design patterns in JavaScript:
+Review and implement the following design patterns in JavaScript:
 * Singleton pattern
 * Observer pattern
 * Decorator pattern
