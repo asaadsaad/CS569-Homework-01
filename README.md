@@ -1,12 +1,6 @@
 # CS569 Homework
 
-### Review RxJS
-Review and write small code snippets of the following RxJS features:
-* Various ways to create observables
-* Creating a Behaviour Subject, read/update its value
-* MergeMap operator
+### Write a summary with TypeScript code examples of the Singleton pattern.
+### What advantage do we get from using the Decorator pattern?
+### Use RxJS in an example to convert an array of objects from [{first: string, last: string }] to [{fullname: string}].
 
-### Review Design Patterns
-Read and write a summary about the following design patterns:
-* Singleton pattern
-* Decorator pattern
